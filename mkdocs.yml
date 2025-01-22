@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: My site
+site_url: https://helisu.dk
+repo_name: weestack.github.io
+theme:
+  name: material
