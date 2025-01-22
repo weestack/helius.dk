@@ -1,5 +1,63 @@
-site_name: My site
-site_url: https://helisu.dk
+docs_dir: mkdocs
+site_dir: site
+site_name: Helius
+site_url: https://helius.dk
 repo_name: weestack.github.io
+
 theme:
   name: material
+  icon:
+    logo: "material/console"
+  custom_dir: mkdocs/overrides
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # NOTE: the order of the palettes below matter.
+    # The first one in the list will become the default for the user.
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+plugins:
+  - search
+  - blog:
+      authors: true
+      authors_file: author.yml
+  - rss:
+      match_path: blog/posts/.*
+      abstract_chars_count: -1 # include entire post in rss, for rss readers
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+      #image: https://github.com/fredrikaverpil.png
+
+nav:
+  - Blog:
+      - blog/index.md
+      - tags.md
+  - About me: about/index.md
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/alexander-hogh/
