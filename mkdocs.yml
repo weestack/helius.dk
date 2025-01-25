@@ -65,3 +65,5 @@ extra:
       link: https://github.com/weestack
     - icon: fontawesome/brands/telegram
       link: https://t.me/weestack
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@weestack
