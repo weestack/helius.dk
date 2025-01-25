@@ -53,9 +53,9 @@ plugins:
       #image: https://github.com/fredrikaverpil.png
 
 nav:
-  - Blog:
-      - blog/index.md
-      - tags.md
+  #- Blog:
+  #    - blog/index.md
+  #    - tags.md
   - About me: about/index.md
 extra:
   social:
