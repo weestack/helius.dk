@@ -4,11 +4,38 @@ site_name: Helius
 site_url: https://helius.dk
 repo_name: weestack.github.io
 
+markdown_extensions:
+  - admonition
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.blocks.caption
+  - pymdownx.snippets:
+      url_download: true
+      check_paths: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
 theme:
   name: material
   icon:
     logo: "material/console"
   custom_dir: mkdocs/overrides
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -53,9 +80,10 @@ plugins:
       #image: https://github.com/fredrikaverpil.png
 
 nav:
-  #- Blog:
-  #    - blog/index.md
-  #    - tags.md
+  - Blog:
+      - blog/index.md
+  - Cheat Sheets:
+      - cheat-sheets/compile-v8js.md
   - About me: about/index.md
 extra:
   social:
