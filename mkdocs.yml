@@ -2,7 +2,12 @@ docs_dir: mkdocs
 site_dir: site
 site_name: Helius
 site_url: https://helius.dk
+site_description: >-
+  Personal website and blog og Alexander Høgh
 repo_name: weestack.github.io
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2025 Alexander Høgh
 
 markdown_extensions:
   - admonition
@@ -69,6 +74,10 @@ plugins:
   - blog:
       authors: true
       authors_file: author.yml
+      # other entries omitted
+      post_slugify: !!python/object/apply:extensions.ext.slugs.slugify
+        kwds:
+          short: true
   - rss:
       match_path: blog/posts/.*
       abstract_chars_count: -1 # include entire post in rss, for rss readers

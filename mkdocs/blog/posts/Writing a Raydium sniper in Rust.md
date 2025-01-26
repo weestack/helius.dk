@@ -3,8 +3,9 @@ date: 2025-01-06
 authors:
   - weestack
 comments: true
+blog_toc: true
 tags:
-    - portfolio
+    - Solana
 ---
 ![AI generated image of a Robot doing graph analysis](/static/raydium_sniper_part_1/robot_analysis.png)
 
@@ -16,7 +17,7 @@ This is a story about how I discovered sites like Dexscreener, stayed up all nig
 
 
 ## What to expect
-This series of articles will be released as I find time to write them. After each release, I will update the associated GitHub repository here, with the latest code. This also means, the sniper will be released in small chunks.
+This series of articles will be released as I find time to write them. After each release, I will update the associated [GitHub repository here](https://github.com/weestack/Solana-Sniper), with the latest code. This also means, the sniper will be released in small chunks.
 
 So, when will it all be available? Honestly, I don’t know yet. Ideas often evolve over time, and while I already have the final code in a private repository, I might come up with improvements or ways to make it more user-friendly as this series progresses.
 
@@ -36,7 +37,7 @@ This article will chronicle my amazing adventure and the lessons I learned along
 ## Prerequisites
 To follow along with this series, you should have some experience in Rust or at least a few years of programming experience in any language. The explanations will assume familiarity with basic programming concepts, as well as the ability to compile and use Rust programs.
 
-If you have suggestions for improvements, feel free to reach out to me at https://t.me/weestack.
+If you have suggestions for improvements, feel free to reach out to me at [https://t.me/weestack](https://t.me/weestack).
 
 
 ## Disclaimer
@@ -48,7 +49,7 @@ Always trade responsibly. Never risk more money than you can afford to lose. It 
 
 
 ## Getting our hands dirty
-!!! example "Creating the base structure"
+!!! tip "Creating the base structure"
 ```bash
 mkdir Solana-Sniper
 cd Solana-Sniper
@@ -57,7 +58,7 @@ cargo new sniper
 ```
 
 For those familiar with Rust, we’re not just creating a single binary. Instead, we’ll be building multiple binaries along with a shared library that connects them. I chose this structure for its flexibility and ease of use. In my case, it allowed me to manage a command suite, sniper, algorithmic trader, and a shared library, all working seamlessly together. This modular approach makes it easier to maintain and expand the project in the future.
-!!! example "Adding the root `Cargo.toml`"
+!!! tip "Adding the root `Cargo.toml`"
 ```toml
 [workspace]
 resolver = "2"
@@ -100,7 +101,7 @@ Our worktree after `cargo new sniper`
 ## Accepting variables from a .env file
 The first step is to create a secure and convenient way to store important variables for our sniper, such as paid RPC and WSS connections, private keys, snipe amounts, fee amounts, and other data. For security reasons, we should avoid adding this information to Git. This will be handled in the shared library mentioned earlier.
 
-!!! example "Creating files for our library"
+!!! tip "Creating files for our library"
 ```bash
 cargo new --lib utils
 sed -i -e 's/name.workspace = true/name = "utils"/g' utils/Cargo.toml
@@ -113,7 +114,7 @@ touch utils/src/env/errors.rs
 Using the above steps, we create a new library package, rename it to “utils,” and add a folder named `env`. Inside the folder, we include `mod.rs`, `env.rs`, and `errors.rs` files.
 
 Before proceeding with any coding, add the following dependencies to the respective `Cargo.toml` files to ensure everything is set up.
-!!! example "root `Cargo.toml`" 
+!!! tip "root `Cargo.toml`" 
 Inside the root folders Cargo.toml, make these updates
 ```toml
 #Cargo.toml (root Cargo.toml)
@@ -147,7 +148,7 @@ solana-program = { workspace = true }
 
 Now that the dependencies are sorted, let’s proceed with parsing the environment.
 
-!!! example "utils/src/env/env.rs"
+!!! tip "utils/src/env/env.rs"
 
 ```rust
 use std::{env, fmt, fs, io};
@@ -240,7 +241,7 @@ In the above, we define the `Env` struct with a ::new method. As a bonus, if you
 
 Note that we won't implement the correct data type for the private keypair until it's necessary.
 
-!!! example  "utils/src/env/errors.rs"
+!!! tip  "utils/src/env/errors.rs"
 
 ```Rust
 use std::env::VarError;
@@ -263,7 +264,7 @@ Here, we use `thiserror` to define the errors that may occur in `Env::new`, such
 
 Now, let’s give it a try.
 
-!!! example "sniper/srv/mains.rs"
+!!! tip "sniper/srv/mains.rs"
 ```rust
 use utils::env::env::Env;
 fn main() {
@@ -284,3 +285,5 @@ Output of the loaded env variables
 ///
 ## Up next
 In the next article, we’ll dive into Solana transactions, websockets, and RPC to listen for newly created tokens. Thanks for reading this tutorial! Don’t forget to subscribe so you won’t miss the next part of the series.
+
+[donations]: /donations.md
