@@ -4,6 +4,8 @@ authors:
   - weestack
 comments: true
 blog_toc: true
+categories:
+  - Solana Sniper
 tags:
     - Solana
 ---
@@ -14,7 +16,7 @@ tags:
 If sniping positions are important to you, Rust or any compiled language is essential for peeling off every possible millisecond. This stands in contrast to the more traditional sniping language, JavaScript, which is interpreted and therefore inherently slower than a compiled language.
 
 This is a story about how I discovered sites like Dexscreener, stayed up all night trying to turn a profit on those impressive +10,000% gain tokens through manual trades, and eventually ended up coding my own sniper. Starting with Python and later transitioning to Rust, I was able to consistently rank among the top 10 snipes for any new AMM token on Raydium.
-
+<!-- more -->
 
 ## What to expect
 This series of articles will be released as I find time to write them. After each release, I will update the associated [GitHub repository here](https://github.com/weestack/Solana-Sniper), with the latest code. This also means, the sniper will be released in small chunks.

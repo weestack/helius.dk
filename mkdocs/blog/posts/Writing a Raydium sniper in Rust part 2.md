@@ -4,14 +4,16 @@ authors:
   - weestack
 comments: true
 blog_toc: true
+categories:
+  - Solana Sniper
 tags:
     - Solana
 ---
 ![AI generated image of an office with screens and graphs](/static/raydium_sniper_part_2/y8.png)
 # Writing a Solana Raydium sniper in Rust part 2
 
-
 This is part two of this series, where we are creating a Solana sniper bot for Raydium from scratch in Rust. [See the first post here](/blog/2025/01/06/writing-a-raydium-sniper-in/) which includes an introduction about why we use a compiled language instead of JavaScript, as well as a brief introduction about me. You can find the latest [GitHub source here](https://github.com/weestack/Solana-Sniper), which will be updated with each new post.
+<!-- more -->
 
 ## Setting up a logger
 Using logging in any software is essential, as it helps with debugging. Standard log levels include trace, debug, info, warn, and error.

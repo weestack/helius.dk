@@ -4,12 +4,16 @@ authors:
   - weestack
 comments: true
 blog_toc: true
+categories:
+  - Solana Sniper
 tags:
     - Solana
 ---
 ![AI generated image of a friendly humanoid bot](/static/raydium_sniper_part_3/solana_scanner.png)
 # Writing a Raydium sniper in Rust part 3
 This is part three of this series, where we are creating a Solana sniper bot for Raydium from scratch in Rust. See the first post here which includes an introduction about why we use a compiled language instead of JavaScript, as well as prerequisites and a brief introduction about me. You can find the latest [GitHub source here](https://github.com/weestack/Solana-Sniper), which will be updated with each new post.
+
+<!-- more -->
 
 ## Disclaimer
 The information provided in this series of articles is for educational purposes only and should not be considered financial or investment advice. Trading, including sniping tokens, carries significant risks, and there is no guarantee of profit.

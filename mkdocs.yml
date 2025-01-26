@@ -32,6 +32,7 @@ theme:
     logo: "material/console"
   custom_dir: mkdocs/overrides
   features:
+    - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
@@ -72,12 +73,17 @@ theme:
 plugins:
   - search
   - blog:
+      blog_toc: true
+      post_date_format: long
+      post_readtime: true
+      archive: false
+      categories: true
       authors: true
       authors_file: author.yml
       # other entries omitted
-      post_slugify: !!python/object/apply:extensions.ext.slugs.slugify
-        kwds:
-          short: true
+      #post_slugify: !!python/object/apply:extensions.ext.slugs.slugify
+      #  kwds:
+      #    short: true
   - rss:
       match_path: blog/posts/.*
       abstract_chars_count: -1 # include entire post in rss, for rss readers
@@ -86,7 +92,7 @@ plugins:
       categories:
         - categories
         - tags
-      #image: https://github.com/fredrikaverpil.png
+      #image: https://gravatar.com/userimage/139737160/73bde38aaa9ddd892400d43568b482ef.jpeg?size=128
 
 nav:
   - Blog:
