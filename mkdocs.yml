@@ -7,7 +7,7 @@ site_description: >-
 repo_name: weestack.github.io
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2025 Alexander Høgh
+copyright: Copyright &copy; 2025 Alexander Høgh
 
 markdown_extensions:
   - admonition
@@ -99,6 +99,7 @@ nav:
       - blog/index.md
   - Cheat Sheets:
       - cheat-sheets/compile-v8js.md
+      - cheat-sheets/mdadm.md
   - About me: about/index.md
 extra:
   social:
