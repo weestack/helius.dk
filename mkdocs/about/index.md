@@ -1,11 +1,10 @@
 # About me
-![Gravatar](https://gravatar.com/userimage/139737160/73bde38aaa9ddd892400d43568b482ef.jpeg?size=776)
+![Alexander Høgh](/static/me.jpg){ width="450" }
+/// caption
+///
 
-[Telegram@weestack](https://t.me/weestack) | [Github@weestack](https://github.com/weestack)
-
-Hello, and thank you for your interest in me! 
-
-I’m Alexander Høgh, a Senior DevOps Engineer.
+<p style="text-align:center;">Hello, and thank you for the interest in me!</p>
+<p style="text-align:center;">I’m Alexander Høgh, a Senior DevOps Engineer.</p>
 
 ## Who Am I
 I’m a Senior DevOps Engineer with a passion for Rust, Blockchain, and all things tech.
