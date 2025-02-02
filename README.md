@@ -28,6 +28,9 @@ uv sync
 uv sync --upgrade
 ```
 
+### Icons
+https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=icon
+
 ### 🍽️ Serve locally
 
 ```bash
