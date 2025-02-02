@@ -103,6 +103,7 @@ nav:
       - cheat-sheets/compile-v8js.md
       - cheat-sheets/mdadm.md
       - cheat-sheets/curl.md
+      - cheat-sheets/ollama.md
       - cheat-sheets/grub_recovery.md
   - About me: about/index.md
 extra:
