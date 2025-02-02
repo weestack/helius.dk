@@ -1,3 +1,13 @@
+---
+date: 2025-01-25
+draft: false
+tags:
+  - linux
+  - grub2
+title: Grub recovery to boot up non bootable linux instance
+icon: simple/gnubash
+---
+
 # Grub recovery
 If, for some reason, your Linux system won't boot, you can spin up a rescue system.  
 This issue might occur after a kernel upgrade or downgrade.

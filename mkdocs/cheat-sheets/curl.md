@@ -1,3 +1,11 @@
+---
+date: 2025-01-25
+draft: false
+tags:
+  - curl
+title: Curl cheatsheets
+icon: simple/curl
+---
 # Curl
 
 Curl can be used for a variety of tasks and is my go-to tool for testing web protocols, verifying mail credentials—heck, even testing FTP!

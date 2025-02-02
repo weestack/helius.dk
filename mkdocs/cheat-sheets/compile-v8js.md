@@ -1,3 +1,12 @@
+---
+date: 2025-01-25
+draft: false
+tags:
+  - docker
+title: Compiling V8js for Debian Bookworm
+icon: simple/docker
+---
+
 # Compiling V8Js for Debian Bookworm
 
 To compile **V8Js** for PHP 7.3 using a Docker build, follow these key steps:

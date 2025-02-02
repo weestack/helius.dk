@@ -1,3 +1,13 @@
+---
+date: 2025-01-25
+draft: false
+tags:
+  - linux
+  - mdadm
+title: Grub recovery to boot up non bootable linux instance
+icon: simple/linux
+---
+
 # mdadm replace disk
 When working with dedicated hardware, there are times when a disk may fail or become unstable. This is where RAID comes into play, allowing data to be duplicated across disks using different strategies to maintain redundancy and minimize downtime.
 

@@ -1,3 +1,11 @@
+---
+date: 2025-02-02
+draft: false
+tags:
+  - ollama
+title: Ollama
+icon: simple/ollama
+---
 # Ollama
 Ollama is a lightweight, open-source framework for running and managing large language models (LLMs) locally.
 
