@@ -1,5 +1,7 @@
 ---
-date: 2025-02-02
+date:
+  created: 2025-02-02
+  updated: 2025-02-02
 draft: false
 tags:
   - ollama

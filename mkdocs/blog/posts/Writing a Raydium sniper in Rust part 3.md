@@ -1,5 +1,7 @@
 ---
-date: 2025-01-20
+date:
+  created: 2025-01-20 
+  updated: 2025-01-20
 authors:
   - weestack
 comments: true

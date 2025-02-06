@@ -1,5 +1,7 @@
 ---
-date: 2025-01-25
+date:
+  created: 2025-01-25 
+  updated: 2025-01-25
 draft: false
 tags:
   - docker
