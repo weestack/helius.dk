@@ -30,6 +30,8 @@ markdown_extensions:
 
 theme:
   name: material
+  static_templates:
+    - sitemap.html
   icon:
     logo: "material/console"
   custom_dir: mkdocs/overrides
@@ -75,6 +77,7 @@ theme:
 plugins:
   # - optimize # Better seo score
   - search
+  - git-revision-date-localized
   - blog:
       blog_toc: true
       post_date_format: long
