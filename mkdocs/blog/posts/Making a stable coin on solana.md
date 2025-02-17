@@ -17,7 +17,7 @@ tags:
 
 Recently, I spoke with someone about creating a stablecoin. I had given it some thought myself and asked him:
 > So how do you stabilize it on the curve?
-
+<!-- more -->
 By this, I meant how to keep it steady at $1 or €1 because whenever you mint a coin using the token program and start swapping in and out, the price fluctuates.  
 He responded:
 >  You need to make triggers to keep the peg in place
