@@ -824,55 +824,13 @@
 <blockquote>
 <p>So how do you stabilize it on the curve?</p>
 </blockquote>
-<p>By this, I meant how to keep it steady at $1 or €1 because whenever you mint a coin using the token program and start swapping in and out, the price fluctuates.<br />
-He responded:</p>
-<blockquote>
-<p>You need to make triggers to keep the peg in place</p>
-</blockquote>
-<p>He also mentioned collateralization and other concepts, but that’s not particularly relevant to this article.<br />
-Being me, I kept thinking about it, and these are my (probably naive) solutions to creating a stablecoin:  </p>
-<h3 id="idea-one-constant-product"><a class="toclink" href="2025/02/17/making-a-stable-coin-on-solana/#idea-one-constant-product">Idea one Constant product</a></h3>
-<figure>
-<p><img alt="Swap distribution on a stable coin" src="/static/stable_coin_on_solana/Screenshot 2025-02-17 at 21.11.58.png" /></p>
-<figcaption>
-<p>Swap distribution on a stable coin</p>
-</figcaption>
-</figure>
-<h4 id="the-math"><a class="toclink" href="2025/02/17/making-a-stable-coin-on-solana/#the-math">The math</a></h4>
-<p>When a token is created on Solana using the token program, its value is determined by the <a href="https://spl.solana.com/token-swap#constant-product">Constant product</a>. Below is a simplified version of the necessary calculation:
-Minted token supply / Solana supply
-5000 / 5000 = 1 sol</p>
-<p>If we wanted to create a token that always remains worth 1 SOL, we could develop a smart contract that mints on buys and burns on sells to maintain equilibrium.</p>
-<p>However, a stablecoin should probably track something more stable—like the Euro. For that, we need an oracle.</p>
-<blockquote>
-<p>An <a href="https://docs.chain.link/docs/solana/data-feeds-solana/">oracle</a> in smart contracts is a service to fetch off-chain data, such as the euro price.</p>
-</blockquote>
-<p>Now, the math effectively becomes:<br />
-minted_supply / (solana supply / euro price)
-5000 / (5000 / 7.5) =
-5000 / 666.6667 =
-7.5  </p>
-<p>The status quo can still be maintained by minting and burning with corresponding buys and sells directly within the smart contract. With the help of the oracle, it can automatically adjust itself whenever the Euro fluctuates.</p>
-<p>That concludes Idea One, which already seems to exist in the form of this <a href="https://github.com/saber-hq/stable-swap/blob/master/stable-swap-math/src/curve.rs#L225">stable swap program</a>.</p>
-<h3 id="idea-two-liquidity-providing"><a class="toclink" href="2025/02/17/making-a-stable-coin-on-solana/#idea-two-liquidity-providing">Idea two, liquidity providing</a></h3>
-<p><em>Idea two</em> builds upon the first but introduces a slight... let’s say profit incentive (Disclaimer: This is just an idea—there may be regulatory concerns).  </p>
-<p>Let’s say you create a €100M stablecoin, meaning you swap €100M for the equivalent amount of SOL. At today’s exchange rate (€169.49 per SOL), that would equal 590,005.31 SOL.<br />
-To maintain its value at €1, we apply the formula from Idea One and isolate the unknown.  </p>
-<p>The real difference in this idea is using event listeners on Solana for our mint and taking the following actions:  </p>
-<ul>
-<li>If the value drops below €1, we swap in SOL to push it back up.  </li>
-<li>If the value rises above €1, we swap out SOL to bring it back down.  </li>
-</ul>
-<p>This is liquidity providing in its purest/simplest form. However, there are several challenges to consider, such as sandwich attacks, arbitrage bots, and so on.</p>
-<p>This being liquidity providing also means you need to account for price fluctuations while also ensuring the ability to stake the invested supply.</p>
-<ul>
-<li>Sandwich attacks can be mitigated by using Jito to wrap swaps.</li>
-<li>Arbitrage bots are harder to counter and require technical finesse—primarily by being faster.</li>
-</ul>
-<h3 id="wrap-up"><a class="toclink" href="2025/02/17/making-a-stable-coin-on-solana/#wrap-up">Wrap up</a></h3>
-<p>That’s it for my thoughts on stablecoins. They are by no means a new concept and operate in a heavily regulated field. This article may not have provided the exact insights you were hoping for, but at the very least, it should give you a few ideas to explore on this topic. </p>
-<h3 id="disclaimer"><a class="toclink" href="2025/02/17/making-a-stable-coin-on-solana/#disclaimer">Disclaimer:</a></h3>
-<p>The information provided in this blog is for educational and informational purposes only. It does not constitute financial, legal, or investment advice. Always check the regulations in effect in your jurisdiction before considering any concepts discussed here. I take no responsibility for any actions taken based on this content.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/02/17/making-a-stable-coin-on-solana/">
+          Continue reading
+        </a>
+      </nav>
     
   </div>
 </article>
