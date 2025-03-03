@@ -116,8 +116,6 @@ extra:
       link: https://www.linkedin.com/in/alexander-hogh/
     - icon: fontawesome/brands/github
       link: https://github.com/weestack
-    - icon: fontawesome/brands/telegram
-      link: https://t.me/weestack
   consent:
     title: Cookie consent
     description: >-
