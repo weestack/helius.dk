@@ -109,6 +109,7 @@ nav:
       - cheat-sheets/curl.md
       - cheat-sheets/ollama.md
       - cheat-sheets/grub_recovery.md
+      - cheat-sheets/nginx-argbased-redirect.md
   - About me: about/index.md
 extra:
   social:
