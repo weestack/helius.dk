@@ -5,9 +5,12 @@ description = "Alexander Høgh's personal website"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+  "mkdocs",
   "mkdocs-material",
-  "mkdocs-rss-plugin",
   "mkdocs-redirects",
+  "mkdocs-rss-plugin",
+  "mkdocs-material-extensions",
+  "mkdocs-git-revision-date-localized-plugin",
   "pillow",
   "cairosvg",
 ]
