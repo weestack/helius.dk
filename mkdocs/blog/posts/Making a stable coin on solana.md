@@ -20,7 +20,7 @@ Recently, I spoke with someone about creating a stablecoin. I had given it some 
 <!-- more -->
 By this, I meant how to keep it steady at $1 or €1 because whenever you mint a coin using the token program and start swapping in and out, the price fluctuates.  
 He responded:
->  You need to make triggers to keep the peg in place
+> You need to make triggers to keep the peg in place
 
 He also mentioned collateralization and other concepts, but that’s not particularly relevant to this article.  
 Being me, I kept thinking about it, and these are my (probably naive) solutions to creating a stablecoin:  

@@ -7,7 +7,7 @@ site_description: >-
 repo_name: weestack.github.io
 
 # Copyright
-copyright: Copyright &copy; 2025 Alexander Høgh
+copyright: Copyright &copy; 2026 Alexander Høgh
 
 markdown_extensions:
   - admonition

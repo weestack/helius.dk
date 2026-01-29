@@ -11,6 +11,7 @@ dependencies = [
   "mkdocs-rss-plugin",
   "mkdocs-material-extensions",
   "mkdocs-git-revision-date-localized-plugin",
+  "watchdog",
   "pillow",
   "cairosvg",
 ]
