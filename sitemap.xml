@@ -21,8 +21,13 @@
         <changefreq>monthly</changefreq>
     </url>
     <url>
+         <loc>https://helius.dk/blog/2026/01/28/hot-reloading/</loc>
+         <lastmod>2026-01-29T22:08:28+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
          <loc>https://helius.dk/blog/2025/02/17/making-a-stable-coin-on-solana/</loc>
-         <lastmod>2025-02-17T20:18:20+00:00</lastmod>
+         <lastmod>2026-01-29T22:08:28+00:00</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     <url>
@@ -76,18 +81,28 @@
         <changefreq>monthly</changefreq>
     </url>
     <url>
+         <loc>https://helius.dk/blog/category/rust/</loc>
+         <lastmod>2026-01-29T22:08:59+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+         <loc>https://helius.dk/blog/category/hot-reloading/</loc>
+         <lastmod>2026-01-29T22:08:59+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
          <loc>https://helius.dk/blog/category/solana-sniper/</loc>
-         <lastmod>2025-07-29T21:26:21+00:00</lastmod>
+         <lastmod>2026-01-29T22:08:59+00:00</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     <url>
          <loc>https://helius.dk/blog/category/solana-smart-contract/</loc>
-         <lastmod>2025-07-29T21:26:21+00:00</lastmod>
+         <lastmod>2026-01-29T22:08:59+00:00</lastmod>
         <changefreq>monthly</changefreq>
     </url>
     <url>
          <loc>https://helius.dk/blog/category/solana-stable-coin/</loc>
-         <lastmod>2025-07-29T21:26:21+00:00</lastmod>
+         <lastmod>2026-01-29T22:08:59+00:00</lastmod>
         <changefreq>monthly</changefreq>
     </url>
 </urlset>
