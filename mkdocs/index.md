@@ -11,11 +11,11 @@ This blog is dedicated to my hobby projects, where I decided to share my journey
 
 - [Solana sniper](/blog/category/solana-sniper/)
   Building a blazing fast Solana sniper in Rust
-- Solana Copy trading  
-  Expected to start Q2 2025
-- Rust Limit order book  
-  Expected to start Q3 2025
-- On-chain Rust trader
-  Expected to start Q4 2025
+- Grid trader  
+  Building a dynamic ATR based grid trader
+- Brownian motion  
+  Add limit orders and sells to trading suite with brownian motion
+- [Rust Hot-reload](/blog/category/hot-reloading/)
+  Using rust to make hot reload components with dynamic linking and FFI
 
 </div>
