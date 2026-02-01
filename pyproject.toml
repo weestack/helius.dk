@@ -10,6 +10,7 @@ dependencies = [
   "mkdocs-redirects",
   "mkdocs-rss-plugin",
   "mkdocs-material-extensions",
+  " mkdocs-jupyter",
   "mkdocs-git-revision-date-localized-plugin",
   "watchdog",
   "pillow",

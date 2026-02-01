@@ -27,6 +27,12 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 theme:
   name: material
@@ -77,6 +83,9 @@ theme:
 plugins:
   # - optimize # Better seo score
   - search
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
   - git-revision-date-localized
   - blog:
       blog_toc: true

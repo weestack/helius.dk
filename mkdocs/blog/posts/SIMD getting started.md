@@ -12,13 +12,14 @@ tags:
     - SIMD
     - CPU Instructions
 ---
-
+![Math dots spanning and twisting](/static/SIMD_getting_started/hero_image_numbers.jpg)
 # SIMD getting started
-SIMD in simple terms incorporated cpu instructions where computations can take place in parallel, normally instructions happen one at a time but with SIMD we are able to perform multiple calculations at the same time, example 8 at the same time optimizing performance and power usage.   
-This post will focus on NEON, rather than [Rust's STD SIMD](https://doc.rust-lang.org/std/simd/index.html), for a few reasons, I like specialization over generalization.
+SIMD (Single Instruction, Multiple Data), in simple terms, refers to CPU instructions that allow computations to take place in parallel. While standard instructions typically execute one at a time (scalar), SIMD performs multiple calculations simultaneously. For example, you can process 8 data points in a single clock cycle, significantly optimizing both performance and power efficiency.  
 
+This post focuses on NEON (ARM's SIMD architecture) rather than [Rust's standard SIMD library](https://doc.rust-lang.org/std/simd/index.html), simply because I prefer the control of specialization over generalization.
+<!-- more -->
 ## Following the guide
-Arm Developers has a guide on getting started with NEON, by taking an AVX (x86_64) example and converting it to NEON by looking up counterparts in [SIMD.info](SIMD.info).  
+ARM Developers provides a guide for getting started with NEON by taking an existing x86_64 (AVX) example and converting it to NEON using [SIMD.info](SIMD.info) to find the relevant counterparts.  
 [Reference program com arm.com](https://learn.arm.com/learning-paths/cross-platform/simd-info-demo/simdinfo-example1/).
 
 ```C
@@ -124,3 +125,33 @@ fn main() {
 ```
 
 ## Breaking it down
+We are primarily looking at vector instructions across $N$ lanes.  
+Each lane holds a specific number of bits; the bit-width of the register determines how many lanes you can use. For example, a 128-bit register can be split into four 32-bit lanes.
+
+> `float32x4_t`: A register containing four 32-bit lanes, totaling 128 bits of memory.
+
+> `vld1q_f32`: Loads an array into a 128-bit float32x4_t register.
+
+> `vaddq_f32`: Takes two float32x4_t vectors and adds their corresponding elements (e.g., index 0 of the first vector is added to index 0 of the second).
+
+> `vcgtq_f32`: Compares elements of two vectors to determine if the first is "Greater Than" the second. It returns 0 for false and the 32-bit maximum (all bits set to 1) for true.
+
+> `vmulq_f32`: Multiplies the corresponding elements of two vectors.
+
+> `vsqrtq_f32`: Calculates the square root of each individual element in the vector.
+
+> `vgetq_lane_f32`: Extracts the value from a specific lane within a 4-lane vector.
+
+The remaining code uses standard Rust patterns which we won't cover in detail here.
+
+ 
+!!! tip "Compilation Create a file named `arm_example.rs` and compile it using the optimization flag:"
+```Bash
+rustc -O arm_example.rs
+```
+
+After compiling, you can run the program to see the parallel results:
+![Arm example program output](/static/SIMD_getting_started/running_arm_example.png)
+/// caption
+Arm example program output
+///
