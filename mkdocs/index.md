@@ -17,7 +17,7 @@ This blog is dedicated to my hobby projects, where I decided to share my journey
   Add limit orders and sells to trading suite with brownian motion
 - [Rust Hot-reload](/blog/category/hot-reloading/)
   Using rust to make hot reload components with dynamic linking and FFI
-- [Rust SIMD NEON][/blog/2026/02/01/simd-getting-started/#simd-getting-started_1]
+- [Rust SIMD NEON](/blog/2026/02/01/simd-getting-started/#simd-getting-started_1)
   An example of porting AVX to NEON with SIMD from arm.com
 
 </div>
