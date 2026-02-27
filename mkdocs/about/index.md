@@ -18,14 +18,7 @@ Then... well, you know how hobbies can be—they tend to spiral out of control! 
 
 Recently, I completed a Solana sniper project, where I set up an RPC node on a Latitude.sh server with Shredstream, Yellowstone gRPC, and Prometheus.
 
-Now, I’m eager to contribute more. If you’ve scrolled through my GitHub contributions, you might be disappointed—most of my work has been closed-source for clients. I aim to change that in 2025 and make meaningful contributions to Open Source.
-
-- An Open Source Solana Sniper in Rust
-- All of my algorithmic trading code
-- A Limit Order Book smart contract for Solana
-- A functional Rust trader for on-chain use
-
-I’ve already started with the Solana Sniper and will release everything in chunks, ensuring the code is clean, user-friendly, and well-documented with blog posts explaining every step.
+Now, I’m eager to contribute more. If you’ve scrolled through my GitHub contributions, you might be disappointed—most of my work has been closed-source for clients. With this blog I am to change that and give back to the open source community.
 
 ---
 
